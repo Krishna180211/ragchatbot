@@ -1,0 +1,7 @@
+Flask
+openai
+python-dotenv
+chromadb
+sentence-transformers
+scikit-learn
+gunicorn

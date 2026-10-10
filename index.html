@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NovaTech Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">KS</span>
+      <span class="brand-name">RAG CHATBOT</span>
+    </div>
+
+    <nav class="tabs" aria-label="Main">
+      <button class="tab active" data-view="chat">Chatbot</button>
+      <button class="tab" data-view="history">History <span id="historyCount" class="badge">0</span></button>
+    </nav>
+
+    <div class="topbar-actions">
+      <span id="statusPill" class="pill pill-wait"><i></i><span>Connecting</span></span>
+      <button id="newChatBtn" class="btn-ghost" type="button">New question</button>
+    </div>
+  </header>
+
+  <!-- Display page -->
+  <main id="view-chat" class="view active">
+    <div class="container">
+      <h1>RAG Chatbot Assistant</h1>
+      <p class="subtitle">Ask anything about general knowledge, products which you want.</p>
+      <hr>
+
+      <div id="statusBanner" class="banner banner-wait">Connecting to the knowledge base…</div>
+      <hr>
+
+      <!-- Question and answer sections are created by script.js after a question is sent -->
+      <section id="exchange" aria-live="polite"></section>
+    </div>
+  </main>
+
+  <!-- History page -->
+  <main id="view-history" class="view">
+    <div class="container">
+      <div class="history-head">
+        <h1>History</h1>
+        <button id="clearHistoryBtn" class="btn-ghost danger" type="button">Clear all</button>
+      </div>
+      <input id="historySearch" class="search" type="search" placeholder="Search past questions">
+      <ul id="historyList" class="history-list"></ul>
+    </div>
+  </main>
+
+  <!-- Question input -->
+  <footer id="composer" class="composer">
+    <form id="askForm" class="composer-inner" autocomplete="off">
+      <input id="questionInput" type="text" placeholder="Ask a question, e.g. What is the work from home policy?" required>
+      <button id="sendBtn" type="submit" aria-label="Send question">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+    </form>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

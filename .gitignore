@@ -1,0 +1,25 @@
+# Environment variables and secrets
+
+.env
+.env.*
+!.env.example
+
+# Private chat history
+
+chat_history.json
+
+# Python generated files
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Operating system files
+
+.DS_Store
+
+# Local vector database or generated data
+
+chroma_db/
+vector_db/
